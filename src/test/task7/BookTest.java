@@ -16,5 +16,4 @@ public class BookTest {
         bs.sort();
         bs.print();
     }
-
 }
