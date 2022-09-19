@@ -27,6 +27,15 @@ public class Book {
         this.name = name;
     }
 
+    @Override
+    public String toString() {
+        return "Book{" +
+                "author='" + author + '\'' +
+                ", name='" + name + '\'' +
+                ", year=" + year +
+                '}';
+    }
+
     public int getYear() {
         return year;
     }
