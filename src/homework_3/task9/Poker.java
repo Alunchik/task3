@@ -20,7 +20,7 @@ class Card{
 
 public class Poker {
     public static void main(String[] args) {
-        Deque<Card> deck = new ArrayDeque<Card>();
+        List<Card> deck = new ArrayDeque<Card>();
         for(Suit suit: Suit.values()){
             for(Rank rank: Rank.values()){
                 deck.add(new Card(rank, suit));
@@ -31,7 +31,8 @@ public class Poker {
         int n = sc.nextInt();
         for(int i=0; i<n; i++){
             for(int j=0; j<5; j++){
-                System.out.println(deck.pop().toString());
+                System.out.println(deck.get(deck.size()-1).toString());
+                deck.remove(deck.size()-1);
             }
             System.out.println();
         }
