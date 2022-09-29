@@ -20,7 +20,8 @@ class Card{
 
 public class Poker {
     public static void main(String[] args) {
-        List<Card> deck = new ArrayDeque<Card>();
+        List<Card> deck = new ArrayList<Card>() {
+        };
         for(Suit suit: Suit.values()){
             for(Rank rank: Rank.values()){
                 deck.add(new Card(rank, suit));
