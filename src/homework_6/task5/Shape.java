@@ -1,4 +1,4 @@
-package homework_5.task2;
+package homework_6.task5;
 
 import java.awt.*;
 
