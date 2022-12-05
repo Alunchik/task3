@@ -8,9 +8,6 @@ import java.util.GregorianCalendar;
 
 public class task2 {
     public static void main(String[] args) {
-        int year= Inp.integer();
-        int month= Inp.integer();
-        int day= Inp.integer();
         Date date = new Date();
         date.setYear(Inp.integer());
         date.setMonth(Inp.integer());
