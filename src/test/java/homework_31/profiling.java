@@ -1,7 +1,9 @@
-package homework_29;
+package homework_31;
 
-public class Main {
-    public static void main(String[] args) {
+import homework_29.*;
+
+public class profiling {
+    public static void create_object(){
         Dish dish1 = new Dish(1, "Пельмени", "Описание1");
         Dish dish2 = new Dish(3, "Мясо по французски", "Описание2");
         Dish dish3 = new Dish(3, "Суп сырный", "Описание3");
@@ -31,10 +33,11 @@ public class Main {
         } catch (IllegalTableNumber ex) {
             System.out.println(ex.getMessage());
         }
-        Order[] array = orderManager.getAllOrders();
-        for(Order x : array) {
-            x.print();
-            System.out.println();
+    }
+    public static void main(String[] args) {
+        for(int i=0; i<10000; i++){
+            create_object();
         }
+        System.out.println("test passed");
     }
 }
