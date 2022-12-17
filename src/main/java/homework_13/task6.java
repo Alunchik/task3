@@ -8,13 +8,16 @@ public class task6 {
 
     public static StringBuilder getLine(String line){
         String[] words = line.split(" ");
+        System.out.println(line.length());
         StringBuilder ans = new StringBuilder("");
         for(int i = 0; i < words.length - 1; i++) {
             for(int j = i + 1; j < words.length; j++) {
-                if (words[i].charAt(words[i].length() - 1) == words[j].charAt(0)) {
-                    ans.insert(ans.length(), words[i] + " ");
-                    ans.insert(ans.length(), words[j] + " ");
-                    break;
+                if ((words[j].length() > 0) && (words[i].length()>0)) {
+                    if (words[i].charAt(words[i].length() - 1) == words[j].charAt(0)) {
+                        ans.insert(ans.length(), words[i] + " ");
+                        ans.insert(ans.length(), words[j] + " ");
+                        break;
+                    }
                 }
             }
         }
@@ -23,7 +26,7 @@ public class task6 {
 
     public static void main(String[] args) throws FileNotFoundException {
         Scanner in = new Scanner(System.in);
-        FileReader text = new FileReader("task6.txt");
+        FileReader text = new FileReader("C:\\Users\\79067\\IdeaProjects\\task3\\src\\main\\java\\homework_13\\task6.txt");
         in.close();
         Scanner file = new Scanner(text);
         String line = file.nextLine();
